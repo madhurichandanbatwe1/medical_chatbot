@@ -1,0 +1,81 @@
+2026-11-14 17:03:25,514-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-11-14 17:03:25,514-INFO-[33mPress CTRL+C to quit[0m
+2026-11-14 17:03:31,999-INFO-127.0.0.1 - - [14/Nov/2026 17:03:31] "GET / HTTP/1.1" 200 -
+2026-11-14 17:03:51,177-INFO-Loading vector store for context
+2026-11-14 17:03:51,177-INFO-Initializing Ollama embedding model nomic-embed-text
+2026-11-14 17:03:51,193-INFO-Ollama embedding model configured
+2026-11-14 17:03:51,193-INFO-Loading vector store from vectorstore/db_faiss_nomic
+2026-11-14 17:03:51,196-INFO-Loading faiss with AVX512 support.
+2026-11-14 17:03:51,196-INFO-Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-11-14 17:03:51,196-INFO-Loading faiss with AVX2 support.
+2026-11-14 17:03:51,196-INFO-Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-11-14 17:03:51,196-INFO-Loading faiss.
+2026-11-14 17:03:51,456-INFO-Successfully loaded faiss.
+2026-11-14 17:03:51,510-INFO-Loading LLM from Groq
+2026-11-14 17:03:51,615-INFO-Groq LLM configured successfully
+2026-11-14 17:03:51,617-INFO-No device provided, using cpu
+2026-11-14 17:03:51,937-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2 "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:03:52,189-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 17:03:52,438-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:03:52,697-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 404 Not Found"
+2026-11-14 17:03:52,698-INFO-No modules.json found for cross-encoder/ms-marco-MiniLM-L-6-v2, initializing a new CrossEncoder model.
+2026-11-14 17:03:53,122-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:03:53,364-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 17:03:53,599-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:03:53,850-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 17:03:53,888-INFO-RAG chain created successfully
+2026-11-14 17:03:55,993-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 17:03:56,270-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-11-14 17:03:56,271-ERROR-Failed to process a chat question
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\application.py", line 76, in index
+    response = get_qa_chain().invoke({"input": user_input})
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 511, in invoke
+    return self._call_with_config(self._invoke, input, config, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 2356, in _call_with_config
+    context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\config.py", line 526, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 497, in _invoke
+    **self.mapper.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4205, in invoke
+    output = {
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4206, in <dictcomp>
+    key: future.result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 458, in result
+    return self.__get_result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4189, in _invoke_step
+    return context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 529, in invoke
+    self.generate_prompt(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1920, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1727, in generate
+    self._generate_with_cache(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 2065, in _generate_with_cache
+    result = self._generate(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_groq\chat_models.py", line 627, in _generate
+    response = self.client.create(messages=message_dicts, **params)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\resources\chat\completions.py", line 461, in create
+    return self._post(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-11-14 17:03:56,277-INFO-127.0.0.1 - - [14/Nov/2026 17:03:56] "POST / HTTP/1.1" 200 -

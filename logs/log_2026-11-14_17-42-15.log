@@ -1,0 +1,33 @@
+2026-11-14 17:42:15,945-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-11-14 17:42:15,945-INFO-[33mPress CTRL+C to quit[0m
+2026-11-14 17:42:49,602-INFO-127.0.0.1 - - [14/Nov/2026 17:42:49] "GET / HTTP/1.1" 200 -
+2026-11-14 17:43:13,066-INFO-Loading vector store for context
+2026-11-14 17:43:13,067-INFO-Initializing Ollama embedding model nomic-embed-text
+2026-11-14 17:43:13,090-INFO-Ollama embedding model configured
+2026-11-14 17:43:13,090-INFO-Loading vector store from vectorstore/db_faiss_nomic
+2026-11-14 17:43:13,095-INFO-Loading faiss with AVX512 support.
+2026-11-14 17:43:13,095-INFO-Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-11-14 17:43:13,095-INFO-Loading faiss with AVX2 support.
+2026-11-14 17:43:13,096-INFO-Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-11-14 17:43:13,096-INFO-Loading faiss.
+2026-11-14 17:43:13,375-INFO-Successfully loaded faiss.
+2026-11-14 17:43:13,454-INFO-Loading LLM from Groq
+2026-11-14 17:43:13,599-INFO-Groq LLM configured successfully
+2026-11-14 17:43:13,602-INFO-No device provided, using cpu
+2026-11-14 17:43:13,948-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2 "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:43:14,216-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 17:43:14,476-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:43:14,709-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 404 Not Found"
+2026-11-14 17:43:14,710-INFO-No modules.json found for cross-encoder/ms-marco-MiniLM-L-6-v2, initializing a new CrossEncoder model.
+2026-11-14 17:43:15,272-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:43:15,525-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 17:43:15,756-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:43:16,015-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 17:43:16,068-INFO-RAG chain created successfully
+2026-11-14 17:43:19,766-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 17:43:20,708-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 17:43:20,756-INFO-127.0.0.1 - - [14/Nov/2026 17:43:20] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-11-14 17:43:20,801-INFO-127.0.0.1 - - [14/Nov/2026 17:43:20] "GET / HTTP/1.1" 200 -

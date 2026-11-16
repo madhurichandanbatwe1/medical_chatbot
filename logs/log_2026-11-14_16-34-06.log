@@ -1,0 +1,107 @@
+2026-11-14 16:34:06,408-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-11-14 16:34:06,408-INFO-[33mPress CTRL+C to quit[0m
+2026-11-14 16:34:56,207-ERROR-127.0.0.1 - - [14/Nov/2026 16:34:56] code 400, message Bad request version ('\x08\x83\x9ad\x8c\x9b-\x01')
+2026-11-14 16:34:56,207-INFO-127.0.0.1 - - [14/Nov/2026 16:34:56] "[35m[1m\x16\x03\x01\x07f\x01\x00\x07b\x03\x03\x9d%lçÊ²aÙÄÁÔ¤ÂP\x98\x9b\x83ð$ ¦º"7/µÿ\x9aØc'\x18 p\x09{®\x08\x99b\x86cOÜþ&\x8ejl\x07ú7\x83É8©\x02àæ\x8bõG\x11ºW\x00 **\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x06ù\x8a\x8a\x00\x00þ\x0d\x00º\x00\x00\x01\x00\x01Ý\x00 íÄ\x80ÆÐ\x1eÎ°F\x8boØ\x82Á£ô·\x00ª­ÐmÀ·\x1f\x872^\x93ü`\x05\x00\x90iÈ6\x1fU·Ç\x1b©Í#*6× \x8c!?×KõDùq*\x0ey\x95C\x06.\x1b\x8dÍéÅ\x9dª'KVÀÙTÌ\x04q\x80\x01XÝf¿8Õ<èKéú\x05\x88\x81hÁ\x82\x86É·`W±\x90jvïW\x9f½x\x1b\x8f\x94`ÊK\x80#MT\x93\x85Â\x9e\x19aX\x1bÚ\x0eÊ,\x17Ákå£\x04\x90\x02îôîéÂð¦â\x1c\x8e [F\x8302Ò\x92ÃÁlûq[ÚÚ«\x9fq¥¼¨t\x04\x00+\x00\x07\x06\x9a\x9a\x03\x04\x03\x03\x00\x0b\x00\x02\x01\x00Ê4\x00º\x00¸\x05\x82ß\x13\x02\x01\x05\x82ß\x13\x02\x06\x05\x82ß\x13\x02\x0d\x05\x82ß\x13\x02\x0e\x05\x82ß\x13\x02\x0f\x05\x82ß\x13\x02\x12\x05\x82ß\x13\x02\x13\x05\x82ß\x13\x02\x14\x08\x83\x9ad\x8c\x9b-\x01\x07\x08\x83\x9ad\x8c\x9b-\x01\x08\x08\x83\x9ad\x8c\x9b-\x01\x09\x08\x83\x9ad\x8c\x9b-\x01[0m" HTTPStatus.BAD_REQUEST -
+2026-11-14 16:34:56,208-ERROR-127.0.0.1 - - [14/Nov/2026 16:34:56] code 400, message Bad request syntax ('\x16\x03\x01\x07¦\x01\x00\x07¢\x03\x03lí¦që\x81\x06é«\x03')
+2026-11-14 16:34:56,208-INFO-127.0.0.1 - - [14/Nov/2026 16:34:56] "[35m[1m\x16\x03\x01\x07¦\x01\x00\x07¢\x03\x03lí¦që\x81\x06é«\x03[0m" HTTPStatus.BAD_REQUEST -
+2026-11-14 16:34:56,211-ERROR-127.0.0.1 - - [14/Nov/2026 16:34:56] code 400, message Bad request version ('ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x079')
+2026-11-14 16:34:56,211-INFO-127.0.0.1 - - [14/Nov/2026 16:34:56] "[35m[1m\x16\x03\x01\x07¦\x01\x00\x07¢\x03\x03\x04°¬ª\x96rEéÀ÷\x92-ØâíCº÷ü`¯À\x18ÅÍV\x1fsI§Ag \x88ôk%\x0d\x1c\x8c8i¢\x18Ë\x7fS÷+F\\Dï++¥}þûÄÙV÷\x91K\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x079[0m" HTTPStatus.BAD_REQUEST -
+2026-11-14 16:34:56,211-ERROR-127.0.0.1 - - [14/Nov/2026 16:34:56] code 400, message Bad request version ('\x08\x83\x9ad\x8c\x9b-\x01')
+2026-11-14 16:34:56,211-INFO-127.0.0.1 - - [14/Nov/2026 16:34:56] "[35m[1m\x16\x03\x01\x07¦\x01\x00\x07¢\x03\x03À\x06¸`cTèî\x08\x1c>ìôø{º\x88èÂ<\x8d9\x95¬ò2 "\x10\x8b2\x0c \x10u»4(`,çt5v\x18°Ô\x898]¦m?^Þ»\x04\x17\x99.Ãe\x0bd\x03\x00 ªª\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x079úú\x00\x00Ê4\x00º\x00¸\x05\x82ß\x13\x02\x01\x05\x82ß\x13\x02\x06\x05\x82ß\x13\x02\x0d\x05\x82ß\x13\x02\x0e\x05\x82ß\x13\x02\x0f\x05\x82ß\x13\x02\x12\x05\x82ß\x13\x02\x13\x05\x82ß\x13\x02\x14\x08\x83\x9ad\x8c\x9b-\x01\x07\x08\x83\x9ad\x8c\x9b-\x01\x08\x08\x83\x9ad\x8c\x9b-\x01\x09\x08\x83\x9ad\x8c\x9b-\x01[0m" HTTPStatus.BAD_REQUEST -
+2026-11-14 16:35:14,198-INFO-127.0.0.1 - - [14/Nov/2026 16:35:14] "GET / HTTP/1.1" 200 -
+2026-11-14 16:35:49,121-INFO-Loading vector store for context
+2026-11-14 16:35:49,121-INFO-Initializing hugging face embedding model
+2026-11-14 16:35:49,123-INFO-No device provided, using cpu
+2026-11-14 16:35:49,493-INFO-HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 16:35:49,498-INFO-Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-11-14 16:35:50,286-INFO-HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 16:35:50,543-INFO-HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 16:35:50,841-INFO-HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-11-14 16:35:50,844-INFO-Hugging face model loaded
+2026-11-14 16:35:50,845-INFO-Loading existing vectorstore
+2026-11-14 16:35:50,847-INFO-Loading faiss with AVX512 support.
+2026-11-14 16:35:50,849-INFO-Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-11-14 16:35:50,849-INFO-Loading faiss with AVX2 support.
+2026-11-14 16:35:50,849-INFO-Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-11-14 16:35:50,849-INFO-Loading faiss.
+2026-11-14 16:35:50,869-INFO-Successfully loaded faiss.
+2026-11-14 16:35:50,913-INFO-Loading LLM from Hugging Face
+2026-11-14 16:35:51,012-INFO-LLM loaded successfully
+2026-11-14 16:35:51,015-INFO-No device provided, using cpu
+2026-11-14 16:35:51,270-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2 "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:35:51,531-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 16:35:51,775-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:35:52,031-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 404 Not Found"
+2026-11-14 16:35:52,032-INFO-No modules.json found for cross-encoder/ms-marco-MiniLM-L-6-v2, initializing a new CrossEncoder model.
+2026-11-14 16:35:52,434-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:35:52,686-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 16:35:52,939-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:35:53,196-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 16:35:53,233-INFO-RAG chain created successfully
+2026-11-14 16:35:53,799-INFO-HTTP Request: POST https://router.huggingface.co/v1/chat/completions "HTTP/1.1 400 Bad Request"
+2026-11-14 16:35:53,800-ERROR-Failed to process a chat question
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\huggingface_hub\utils\_http.py", line 836, in hf_raise_for_status
+    response.raise_for_status()
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\httpx\_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '400 Bad Request' for url 'https://router.huggingface.co/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\application.py", line 76, in index
+    response = get_qa_chain().invoke({"input": user_input})
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 511, in invoke
+    return self._call_with_config(self._invoke, input, config, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 2356, in _call_with_config
+    context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\config.py", line 526, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 497, in _invoke
+    **self.mapper.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4205, in invoke
+    output = {
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4206, in <dictcomp>
+    key: future.result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 458, in result
+    return self.__get_result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4189, in _invoke_step
+    return context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 529, in invoke
+    self.generate_prompt(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1920, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1727, in generate
+    self._generate_with_cache(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 2065, in _generate_with_cache
+    result = self._generate(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_huggingface\chat_models\huggingface.py", line 755, in _generate
+    answer = self.llm.client.chat_completion(messages=message_dicts, **params)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\huggingface_hub\inference\_client.py", line 938, in chat_completion
+    data = self._inner_post(request_parameters, stream=stream)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\huggingface_hub\inference\_client.py", line 283, in _inner_post
+    hf_raise_for_status(response)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\huggingface_hub\utils\_http.py", line 929, in hf_raise_for_status
+    raise _format(BadRequestError, message, response) from e
+huggingface_hub.errors.BadRequestError: (Request ID: Root=1-6af84092-0f5668c3163baeb33997b672;fc547760-eeac-4f7f-ba72-fc4972ab9151)
+
+Bad request:
+{'message': "The requested model 'mistralai/Mistral-7B-Instruct-v0.3' is not a chat model.", 'type': 'invalid_request_error', 'param': 'model', 'code': 'model_not_supported'}
+2026-11-14 16:35:53,805-INFO-127.0.0.1 - - [14/Nov/2026 16:35:53] "POST / HTTP/1.1" 200 -

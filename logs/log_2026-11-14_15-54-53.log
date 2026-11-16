@@ -1,0 +1,20 @@
+2026-11-14 15:54:53,319-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-11-14 15:54:53,319-INFO-[33mPress CTRL+C to quit[0m
+2026-11-14 15:56:16,114-ERROR-Failed to load chat history
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\application.py", line 54, in index
+    messages = load_chat_history(conversation_id)
+  File "c:\users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 66, in load_chat_history
+    initialize_chat_history()
+  File "c:\users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 43, in initialize_chat_history
+    with _connect() as connection:
+  File "c:\users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 27, in _connect
+    return psycopg.connect(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\psycopg\connection.py", line 134, in connect
+    raise new_ex.with_traceback(None)
+psycopg.OperationalError: connection failed: connection to server at "127.0.0.1", port 5432 failed: server does not support SSL, but SSL was required
+Multiple connection attempts failed. All failures were:
+- host: 'localhost', port: '5432', hostaddr: '::1': connection failed: connection to server at "::1", port 5432 failed: server does not support SSL, but SSL was required
+- host: 'localhost', port: '5432', hostaddr: '127.0.0.1': connection failed: connection to server at "127.0.0.1", port 5432 failed: server does not support SSL, but SSL was required
+2026-11-14 15:56:16,122-INFO-127.0.0.1 - - [14/Nov/2026 15:56:16] "[35m[1mGET / HTTP/1.1[0m" 503 -

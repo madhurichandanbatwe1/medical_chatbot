@@ -1,0 +1,40 @@
+2026-11-14 17:07:24,267-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-11-14 17:07:24,267-INFO-[33mPress CTRL+C to quit[0m
+2026-11-14 17:07:52,855-INFO-Loading vector store for context
+2026-11-14 17:07:52,856-INFO-Initializing Ollama embedding model nomic-embed-text
+2026-11-14 17:07:52,871-INFO-Ollama embedding model configured
+2026-11-14 17:07:52,871-INFO-Loading vector store from vectorstore/db_faiss_nomic
+2026-11-14 17:07:52,874-INFO-Loading faiss with AVX512 support.
+2026-11-14 17:07:52,874-INFO-Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-11-14 17:07:52,875-INFO-Loading faiss with AVX2 support.
+2026-11-14 17:07:52,875-INFO-Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-11-14 17:07:52,875-INFO-Loading faiss.
+2026-11-14 17:07:53,130-INFO-Successfully loaded faiss.
+2026-11-14 17:07:53,176-INFO-Loading LLM from Groq
+2026-11-14 17:07:53,266-INFO-Groq LLM configured successfully
+2026-11-14 17:07:53,268-INFO-No device provided, using cpu
+2026-11-14 17:07:53,610-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2 "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:07:53,859-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 17:07:54,124-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:07:54,359-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 404 Not Found"
+2026-11-14 17:07:54,360-INFO-No modules.json found for cross-encoder/ms-marco-MiniLM-L-6-v2, initializing a new CrossEncoder model.
+2026-11-14 17:07:54,868-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:07:55,117-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 17:07:55,368-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 17:07:55,604-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 17:07:55,634-INFO-RAG chain created successfully
+2026-11-14 17:07:57,730-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 17:07:58,371-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 17:07:58,418-INFO-127.0.0.1 - - [14/Nov/2026 17:07:58] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-11-14 17:07:58,470-INFO-127.0.0.1 - - [14/Nov/2026 17:07:58] "GET / HTTP/1.1" 200 -
+2026-11-14 17:11:40,428-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 17:11:40,937-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 17:11:40,977-INFO-127.0.0.1 - - [14/Nov/2026 17:11:40] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-11-14 17:11:41,020-INFO-127.0.0.1 - - [14/Nov/2026 17:11:41] "GET / HTTP/1.1" 200 -
+2026-11-14 17:12:26,889-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 17:12:27,503-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 17:12:27,548-INFO-127.0.0.1 - - [14/Nov/2026 17:12:27] "[32mPOST / HTTP/1.1[0m" 302 -
+2026-11-14 17:12:27,590-INFO-127.0.0.1 - - [14/Nov/2026 17:12:27] "GET / HTTP/1.1" 200 -

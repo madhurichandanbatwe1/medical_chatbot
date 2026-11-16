@@ -1,0 +1,28 @@
+2026-11-14 19:23:58,988-INFO-Loading vector store for context
+2026-11-14 19:23:58,988-INFO-Initializing Ollama embedding model nomic-embed-text
+2026-11-14 19:23:59,001-INFO-Ollama embedding model configured
+2026-11-14 19:23:59,001-INFO-Loading vector store from vectorstore/db_faiss_nomic_semantic
+2026-11-14 19:23:59,004-INFO-Loading faiss with AVX512 support.
+2026-11-14 19:23:59,005-INFO-Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-11-14 19:23:59,005-INFO-Loading faiss with AVX2 support.
+2026-11-14 19:23:59,005-INFO-Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-11-14 19:23:59,006-INFO-Loading faiss.
+2026-11-14 19:23:59,025-INFO-Successfully loaded faiss.
+2026-11-14 19:23:59,046-INFO-Loading LLM from Groq
+2026-11-14 19:23:59,126-INFO-Groq LLM configured successfully
+2026-11-14 19:23:59,128-INFO-No device provided, using cpu
+2026-11-14 19:23:59,570-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2 "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:23:59,807-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 19:24:00,060-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:24:00,310-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 404 Not Found"
+2026-11-14 19:24:00,310-INFO-No modules.json found for cross-encoder/ms-marco-MiniLM-L-6-v2, initializing a new CrossEncoder model.
+2026-11-14 19:24:00,971-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:24:01,221-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 19:24:01,482-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:24:01,733-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 19:24:01,769-INFO-RAG chain created successfully
+2026-11-14 19:24:03,908-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:24:05,355-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:24:07,875-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"

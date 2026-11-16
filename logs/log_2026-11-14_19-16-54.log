@@ -1,0 +1,22 @@
+2026-11-14 19:16:54,747-INFO-Initializing Ollama embedding model nomic-embed-text
+2026-11-14 19:16:54,761-INFO-Ollama embedding model configured
+2026-11-14 19:16:54,761-INFO-Loading vector store from vectorstore/db_faiss_nomic_semantic
+2026-11-14 19:16:54,763-INFO-Loading faiss with AVX512 support.
+2026-11-14 19:16:54,763-INFO-Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-11-14 19:16:54,763-INFO-Loading faiss with AVX2 support.
+2026-11-14 19:16:54,763-INFO-Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-11-14 19:16:54,764-INFO-Loading faiss.
+2026-11-14 19:16:54,786-INFO-Successfully loaded faiss.
+2026-11-14 19:16:54,808-INFO-No device provided, using cpu
+2026-11-14 19:16:55,151-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2 "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:16:55,401-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 19:16:55,648-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:16:55,905-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 404 Not Found"
+2026-11-14 19:16:55,906-INFO-No modules.json found for cross-encoder/ms-marco-MiniLM-L-6-v2, initializing a new CrossEncoder model.
+2026-11-14 19:16:56,356-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:16:56,591-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 19:16:56,859-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:16:57,092-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 19:17:00,737-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"

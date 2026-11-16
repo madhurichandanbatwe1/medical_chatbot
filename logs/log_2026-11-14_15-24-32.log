@@ -1,0 +1,15 @@
+2026-11-14 15:24:35,249-ERROR-Failed to load chat history
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\application.py", line 54, in index
+    messages = load_chat_history(conversation_id)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 66, in load_chat_history
+    initialize_chat_history()
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 43, in initialize_chat_history
+    with _connect() as connection:
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 27, in _connect
+    return psycopg.connect(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\psycopg\connection.py", line 100, in connect
+    attempts = conninfo_attempts(params)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\psycopg\_conninfo_attempts.py", line 55, in conninfo_attempts
+    raise last_exc
+psycopg.OperationalError: failed to resolve host 'HOST': [Errno 11001] getaddrinfo failed

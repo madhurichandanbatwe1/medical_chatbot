@@ -1,0 +1,36 @@
+2026-11-14 15:43:36,266-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-11-14 15:43:36,266-INFO-[33mPress CTRL+C to quit[0m
+2026-11-14 15:45:26,960-ERROR-Failed to load chat history
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\application.py", line 54, in index
+    messages = load_chat_history(conversation_id)
+  File "c:\users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 66, in load_chat_history
+    initialize_chat_history()
+  File "c:\users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 43, in initialize_chat_history
+    with _connect() as connection:
+  File "c:\users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 27, in _connect
+    return psycopg.connect(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\psycopg\connection.py", line 100, in connect
+    attempts = conninfo_attempts(params)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\psycopg\_conninfo_attempts.py", line 55, in conninfo_attempts
+    raise last_exc
+psycopg.OperationalError: failed to resolve host 'HOST': [Errno 11001] getaddrinfo failed
+2026-11-14 15:45:26,970-INFO-127.0.0.1 - - [14/Nov/2026 15:45:26] "[35m[1mGET / HTTP/1.1[0m" 503 -
+2026-11-14 15:45:27,039-INFO-127.0.0.1 - - [14/Nov/2026 15:45:27] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-11-14 15:48:29,714-ERROR-Failed to load chat history
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\application.py", line 54, in index
+    messages = load_chat_history(conversation_id)
+  File "c:\users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 66, in load_chat_history
+    initialize_chat_history()
+  File "c:\users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 43, in initialize_chat_history
+    with _connect() as connection:
+  File "c:\users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\common\chat_state.py", line 27, in _connect
+    return psycopg.connect(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\psycopg\connection.py", line 100, in connect
+    attempts = conninfo_attempts(params)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\psycopg\_conninfo_attempts.py", line 55, in conninfo_attempts
+    raise last_exc
+psycopg.OperationalError: failed to resolve host 'HOST': [Errno 11001] getaddrinfo failed
+2026-11-14 15:48:29,714-INFO-127.0.0.1 - - [14/Nov/2026 15:48:29] "[35m[1mGET / HTTP/1.1[0m" 503 -

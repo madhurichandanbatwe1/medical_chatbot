@@ -1,0 +1,132 @@
+2026-11-14 19:24:52,969-INFO-Loading vector store for context
+2026-11-14 19:24:52,969-INFO-Initializing Ollama embedding model nomic-embed-text
+2026-11-14 19:24:52,983-INFO-Ollama embedding model configured
+2026-11-14 19:24:52,983-INFO-Loading vector store from vectorstore/db_faiss_nomic_semantic
+2026-11-14 19:24:52,987-INFO-Loading faiss with AVX512 support.
+2026-11-14 19:24:52,987-INFO-Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-11-14 19:24:52,987-INFO-Loading faiss with AVX2 support.
+2026-11-14 19:24:52,988-INFO-Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-11-14 19:24:52,988-INFO-Loading faiss.
+2026-11-14 19:24:53,004-INFO-Successfully loaded faiss.
+2026-11-14 19:24:53,024-INFO-Loading LLM from Groq
+2026-11-14 19:24:53,107-INFO-Groq LLM configured successfully
+2026-11-14 19:24:53,109-INFO-No device provided, using cpu
+2026-11-14 19:24:53,442-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2 "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:24:53,683-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 19:24:53,935-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:24:54,229-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 404 Not Found"
+2026-11-14 19:24:54,230-INFO-No modules.json found for cross-encoder/ms-marco-MiniLM-L-6-v2, initializing a new CrossEncoder model.
+2026-11-14 19:24:54,859-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:24:55,114-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 19:24:55,363-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 19:24:55,629-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 19:24:55,670-INFO-RAG chain created successfully
+2026-11-14 19:24:57,771-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:24:58,869-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:25:01,248-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:25:05,426-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:25:06,829-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:25:07,311-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:25:10,444-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:25:11,610-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:25:12,769-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:25:15,124-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:25:15,656-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:25:15,657-INFO-Retrying request to /openai/v1/chat/completions in 17.000000 seconds
+2026-11-14 19:25:33,756-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:25:38,234-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:25:42,589-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:25:43,266-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:25:43,267-INFO-Retrying request to /openai/v1/chat/completions in 23.000000 seconds
+2026-11-14 19:26:07,138-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:26:11,767-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:26:15,945-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:26:16,729-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:26:16,729-INFO-Retrying request to /openai/v1/chat/completions in 25.000000 seconds
+2026-11-14 19:26:42,805-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:26:47,798-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:26:52,666-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:26:53,338-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:26:53,339-INFO-Retrying request to /openai/v1/chat/completions in 24.000000 seconds
+2026-11-14 19:27:18,317-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:27:23,032-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:27:27,640-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:27:28,293-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:27:28,294-INFO-Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-11-14 19:27:42,521-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:27:46,658-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:27:50,803-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:27:51,406-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:27:51,407-INFO-Retrying request to /openai/v1/chat/completions in 14.000000 seconds
+2026-11-14 19:28:06,470-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:28:10,274-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:28:14,861-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:28:15,466-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:28:15,467-INFO-Retrying request to /openai/v1/chat/completions in 9.000000 seconds
+2026-11-14 19:28:24,646-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:28:24,646-INFO-Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-11-14 19:28:26,356-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:28:29,937-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:28:34,552-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:28:35,188-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:28:35,189-INFO-Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2026-11-14 19:28:54,381-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:28:54,382-INFO-Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-11-14 19:28:56,460-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:29:00,922-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:29:05,902-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:29:06,565-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:29:06,566-INFO-Retrying request to /openai/v1/chat/completions in 21.000000 seconds
+2026-11-14 19:29:29,073-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:29:33,417-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:29:38,069-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:29:38,712-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:29:38,713-INFO-Retrying request to /openai/v1/chat/completions in 15.000000 seconds
+2026-11-14 19:29:53,873-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:29:53,874-INFO-Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-11-14 19:29:55,854-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:29:59,751-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:30:03,866-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:30:04,494-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:30:04,495-INFO-Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-11-14 19:30:17,670-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:30:17,671-INFO-Retrying request to /openai/v1/chat/completions in 4.000000 seconds
+2026-11-14 19:30:22,963-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:30:27,009-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:30:31,243-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:30:31,921-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:30:31,922-INFO-Retrying request to /openai/v1/chat/completions in 19.000000 seconds
+2026-11-14 19:30:52,006-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:30:56,358-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:31:00,906-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:31:01,474-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:31:01,475-INFO-Retrying request to /openai/v1/chat/completions in 11.000000 seconds
+2026-11-14 19:31:12,647-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:31:12,647-INFO-Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-11-14 19:31:16,311-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:31:20,348-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:31:24,716-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:31:25,206-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:31:25,207-INFO-Retrying request to /openai/v1/chat/completions in 11.000000 seconds
+2026-11-14 19:31:37,433-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:31:40,902-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:31:45,202-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:31:45,722-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:31:45,724-INFO-Retrying request to /openai/v1/chat/completions in 14.000000 seconds
+2026-11-14 19:32:00,986-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:32:04,754-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:32:09,384-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:32:09,978-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:32:09,979-INFO-Retrying request to /openai/v1/chat/completions in 13.000000 seconds
+2026-11-14 19:32:23,136-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:32:23,136-INFO-Retrying request to /openai/v1/chat/completions in 2.000000 seconds
+2026-11-14 19:32:26,093-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"
+2026-11-14 19:32:30,102-INFO-HTTP Request: POST http://localhost:11434/api/chat "HTTP/1.1 200 OK"
+2026-11-14 19:32:34,866-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 19:32:35,437-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:32:35,438-INFO-Retrying request to /openai/v1/chat/completions in 9.000000 seconds
+2026-11-14 19:32:44,636-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 429 Too Many Requests"
+2026-11-14 19:32:44,636-INFO-Retrying request to /openai/v1/chat/completions in 1.000000 seconds
+2026-11-14 19:32:47,297-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 200 OK"

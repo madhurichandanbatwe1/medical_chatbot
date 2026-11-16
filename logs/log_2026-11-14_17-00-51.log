@@ -1,0 +1,4 @@
+2026-11-14 17:00:51,969-INFO-Initializing Ollama embedding model nomic-embed-text
+2026-11-14 17:00:51,986-INFO-Ollama embedding model configured
+2026-11-14 17:00:54,054-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 17:00:54,100-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"

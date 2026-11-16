@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f3f8f7">
+    <title>MediAssist | AI Medical Chat</title>
+    <style>
+        :root {
+            color-scheme: light;
+            --ink: #17333b;
+            --muted: #678087;
+            --teal: #087f82;
+            --teal-dark: #05676c;
+            --teal-soft: #e4f4f1;
+            --line: #e0ebea;
+            --surface: #ffffff;
+            --canvas: #f3f8f7;
+            --shadow: 0 24px 70px rgba(27, 68, 72, 0.12);
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            min-height: 100vh;
+            margin: 0;
+            padding: 38px 18px;
+            color: var(--ink);
+            background:
+                radial-gradient(circle at 8% 8%, #dff3ef 0, transparent 28rem),
+                radial-gradient(circle at 92% 92%, #e8eefb 0, transparent 30rem),
+                var(--canvas);
+            font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        }
+
+        button, textarea { font: inherit; }
+
+        .app {
+            width: min(100%, 1040px);
+            margin: 0 auto;
+            overflow: hidden;
+            border: 1px solid rgba(220, 234, 232, 0.9);
+            border-radius: 24px;
+            background: var(--surface);
+            box-shadow: var(--shadow);
+        }
+
+        .topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 22px 28px;
+            border-bottom: 1px solid var(--line);
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 13px;
+        }
+
+        .brand-mark {
+            display: grid;
+            width: 44px;
+            height: 44px;
+            place-items: center;
+            border-radius: 14px;
+            color: white;
+            background: linear-gradient(145deg, #0b9691, #087077);
+            box-shadow: 0 8px 18px rgba(8, 127, 130, 0.2);
+        }
+
+        .brand-mark svg { width: 25px; height: 25px; }
+        .brand-name { margin: 0; font-size: 1.05rem; font-weight: 750; letter-spacing: -0.02em; }
+        .brand-caption { margin: 3px 0 0; color: var(--muted); font-size: 0.8rem; }
+
+        .online-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 12px;
+            border: 1px solid #d5ece7;
+            border-radius: 999px;
+            color: #247266;
+            background: #f2fbf8;
+            font-size: 0.78rem;
+            font-weight: 650;
+            white-space: nowrap;
+        }
+
+        .online-dot {
+            width: 8px;
+            height: 8px;
+            border-radius: 50%;
+            background: #32a77d;
+            box-shadow: 0 0 0 3px #dff4e9;
+        }
+
+        .intro { padding: 30px 34px 20px; }
+
+        .eyebrow {
+            margin: 0 0 9px;
+            color: var(--teal);
+            font-size: 0.75rem;
+            font-weight: 750;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(1.6rem, 4vw, 2.2rem);
+            letter-spacing: -0.045em;
+            line-height: 1.15;
+        }
+
+        .intro-copy {
+            max-width: 620px;
+            margin: 10px 0 0;
+            color: var(--muted);
+            font-size: 0.96rem;
+            line-height: 1.6;
+        }
+
+        .conversation {
+            display: flex;
+            min-height: 360px;
+            max-height: 68vh;
+            flex-direction: column;
+            gap: 18px;
+            overflow-y: auto;
+            margin: 0 22px;
+            padding: 22px;
+            border: 1px solid var(--line);
+            border-radius: 18px;
+            background: #fbfdfd;
+            scroll-behavior: smooth;
+        }
+
+        .empty-state {
+            display: grid;
+            flex: 1;
+            align-content: center;
+            justify-items: center;
+            padding: 24px 12px;
+            text-align: center;
+        }
+
+        .empty-icon {
+            display: grid;
+            width: 54px;
+            height: 54px;
+            place-items: center;
+            margin-bottom: 14px;
+            border-radius: 18px;
+            color: var(--teal);
+            background: var(--teal-soft);
+        }
+
+        .empty-icon svg { width: 27px; height: 27px; }
+        .empty-state h2 { margin: 0; font-size: 1.05rem; }
+        .empty-state p { max-width: 390px; margin: 8px 0 0; color: var(--muted); font-size: 0.9rem; line-height: 1.55; }
+
+        .message {
+            display: flex;
+            align-items: flex-start;
+            gap: 11px;
+        }
+
+        .message.user { flex-direction: row-reverse; }
+
+        .avatar {
+            display: grid;
+            width: 34px;
+            height: 34px;
+            flex: 0 0 34px;
+            place-items: center;
+            border: 1px solid var(--line);
+            border-radius: 12px;
+            color: var(--teal-dark);
+            background: white;
+            font-size: 0.7rem;
+            font-weight: 800;
+        }
+
+        .message.user .avatar {
+            border-color: #d3e6fb;
+            color: #356b9b;
+            background: #eaf4ff;
+        }
+
+        .bubble {
+            max-width: min(82%, 720px);
+            padding: 12px 15px;
+            border: 1px solid var(--line);
+            border-radius: 4px 16px 16px;
+            background: white;
+            color: #29454c;
+            font-size: 0.94rem;
+            line-height: 1.6;
+            overflow-wrap: anywhere;
+            white-space: pre-wrap;
+        }
+
+        .message.assistant .bubble {
+            max-width: min(92%, 820px);
+            padding: 16px 19px;
+            border-color: #cbe4de;
+            background: #f5fbf9;
+            color: #173d3c;
+            font-size: 1rem;
+            line-height: 1.75;
+        }
+
+        .message.user .bubble {
+            border-color: #d7e8f8;
+            border-radius: 16px 4px 16px 16px;
+            background: #edf6ff;
+            color: #234762;
+        }
+
+        .error {
+            margin: 16px 22px 0;
+            padding: 12px 14px;
+            border: 1px solid #f0caca;
+            border-radius: 12px;
+            color: #963b3b;
+            background: #fff5f4;
+            font-size: 0.9rem;
+        }
+
+        .composer-wrap { padding: 18px 22px 22px; }
+
+        .composer {
+            display: flex;
+            align-items: flex-end;
+            gap: 12px;
+            padding: 10px;
+            border: 1px solid #d9e7e5;
+            border-radius: 16px;
+            background: white;
+            box-shadow: 0 5px 18px rgba(32, 74, 78, 0.05);
+            transition: border-color 160ms ease, box-shadow 160ms ease;
+        }
+
+        .composer:focus-within {
+            border-color: #77bdbc;
+            box-shadow: 0 0 0 4px rgba(8, 127, 130, 0.09);
+        }
+
+        textarea {
+            width: 100%;
+            min-height: 48px;
+            max-height: 150px;
+            resize: vertical;
+            padding: 13px 10px;
+            border: 0;
+            outline: 0;
+            color: var(--ink);
+            background: transparent;
+            font-size: 0.96rem;
+            line-height: 1.45;
+        }
+
+        textarea::placeholder { color: #91a4a8; }
+
+        .send-button {
+            display: inline-flex;
+            min-height: 46px;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 0 17px;
+            border: 0;
+            border-radius: 12px;
+            color: white;
+            background: var(--teal);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 700;
+            transition: background 160ms ease, transform 160ms ease;
+        }
+
+        .send-button:hover { background: var(--teal-dark); transform: translateY(-1px); }
+        .send-button:focus-visible, .clear-button:focus-visible { outline: 3px solid #9edbd4; outline-offset: 3px; }
+        .send-button svg { width: 17px; height: 17px; }
+
+        .composer-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 12px;
+            margin-top: 11px;
+        }
+
+        .privacy-note, .limit-note { margin: 0; color: var(--muted); font-size: 0.76rem; line-height: 1.45; }
+
+        .bottom-bar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            padding: 15px 28px;
+            border-top: 1px solid var(--line);
+            background: #fcfefe;
+        }
+
+        .disclaimer { max-width: 650px; margin: 0; color: #71858a; font-size: 0.76rem; line-height: 1.5; }
+
+        .clear-button {
+            padding: 8px 10px;
+            border: 1px solid transparent;
+            border-radius: 9px;
+            color: #60767c;
+            background: transparent;
+            cursor: pointer;
+            font-size: 0.8rem;
+            font-weight: 650;
+            white-space: nowrap;
+        }
+
+        .clear-button:hover { border-color: var(--line); color: var(--teal-dark); background: white; }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            clip-path: inset(50%);
+        }
+
+        @media (max-width: 600px) {
+            body { padding: 12px 8px; }
+            .app { border-radius: 18px; }
+            .topbar { padding: 17px 18px; }
+            .brand-mark { width: 40px; height: 40px; }
+            .online-badge { padding: 7px 9px; font-size: 0.7rem; }
+            .intro { padding: 25px 20px 17px; }
+            .conversation { min-height: 300px; max-height: 62vh; margin: 0 12px; padding: 15px 12px; }
+            .bubble { max-width: 84%; padding: 10px 12px; font-size: 0.9rem; }
+            .message.assistant .bubble { max-width: 94%; padding: 13px 14px; font-size: 0.96rem; }
+            .composer-wrap { padding: 14px 12px 17px; }
+            .send-button { width: 46px; padding: 0; }
+            .send-label { display: none; }
+            .bottom-bar { align-items: flex-start; padding: 14px 17px; }
+            .clear-button { padding: 5px 2px; }
+            .limit-note { display: none; }
+        }
+    </style>
+</head>
+<body>
+    <main class="app">
+        <header class="topbar">
+            <div class="brand">
+                <div class="brand-mark" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                        <path d="M9 3.75h6v5.1h5.25v6.3H15v5.1H9v-5.1H3.75v-6.3H9v-5.1Z" fill="currentColor"/>
+                    </svg>
+                </div>
+                <div>
+                    <p class="brand-name">MediAssist</p>
+                    <p class="brand-caption">Your health information companion</p>
+                </div>
+            </div>
+            <div class="online-badge"><span class="online-dot"></span> AI assistant</div>
+        </header>
+
+        <section class="intro">
+            <p class="eyebrow">Ask. Understand. Take the next step.</p>
+            <h1>How can I help you today?</h1>
+            <p class="intro-copy">Ask a health question and I’ll look for relevant information in the medical knowledge base.</p>
+        </section>
+
+        <section class="conversation" id="chat-messages" aria-label="Conversation" aria-live="polite">
+            {% if messages %}
+                {% for msg in messages %}
+                    <article class="message {{ 'user' if msg.role == 'user' else 'assistant' }}">
+                        <div class="avatar" aria-hidden="true">{{ 'YOU' if msg.role == 'user' else 'AI' }}</div>
+                        <div class="bubble">{{ msg.content }}</div>
+                    </article>
+                {% endfor %}
+            {% else %}
+                <div class="empty-state">
+                    <div class="empty-icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none">
+                            <path d="M12 3.5a8.5 8.5 0 0 0-7.3 12.86L3.5 20.5l4.34-1.16A8.5 8.5 0 1 0 12 3.5Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/>
+                            <path d="M12 8v8M8 12h8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h2>Start a conversation</h2>
+                    <p>Type your question below. Answers are generated from retrieved information and may not cover every situation.</p>
+                </div>
+            {% endif %}
+        </section>
+
+        {% if error %}
+            <p class="error" role="alert">{{ error }}</p>
+        {% endif %}
+
+        <div class="composer-wrap">
+            <form class="composer" method="post" action="{{ url_for('index') }}">
+                <label class="sr-only" for="prompt">Your medical question</label>
+                <textarea id="prompt" name="prompt" placeholder="Type your health question..." maxlength="2000" required></textarea>
+                <button class="send-button" type="submit" aria-label="Send question">
+                    <span class="send-label">Send</span>
+                    <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                        <path d="M4.5 12h14M12.5 5.5 19 12l-6.5 6.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </button>
+            </form>
+            <div class="composer-footer">
+                <p class="privacy-note">Please avoid sharing identifying or highly sensitive personal details.</p>
+                <p class="limit-note">Up to 2,000 characters</p>
+            </div>
+        </div>
+
+        <footer class="bottom-bar">
+            <p class="disclaimer">MediAssist provides general information, not a diagnosis or treatment plan. For urgent symptoms, contact local emergency services or a qualified healthcare professional.</p>
+            <form method="post" action="{{ url_for('clear') }}">
+                <button class="clear-button" type="submit">Clear chat</button>
+            </form>
+        </footer>
+    </main>
+    <script>
+        const conversation = document.getElementById("chat-messages");
+        conversation.scrollTop = conversation.scrollHeight;
+    </script>
+</body>
+</html>

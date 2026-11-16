@@ -1,0 +1,11 @@
+2026-11-14 17:51:10,451-INFO-Initializing Ollama embedding model nomic-embed-text
+2026-11-14 17:51:10,464-INFO-Ollama embedding model configured
+2026-11-14 17:51:10,464-INFO-Loading vector store from vectorstore/db_faiss_nomic
+2026-11-14 17:51:10,467-INFO-Loading faiss with AVX512 support.
+2026-11-14 17:51:10,468-INFO-Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-11-14 17:51:10,468-INFO-Loading faiss with AVX2 support.
+2026-11-14 17:51:11,481-INFO-Successfully loaded faiss with AVX2 support.
+2026-11-14 17:51:11,487-INFO-Failed to load GPU Faiss: name 'GpuIndexIVFFlat' is not defined. Will not load constructor refs for GPU indexes. This is only an error if you're trying to use GPU Faiss.
+2026-11-14 17:51:14,624-INFO-HTTP Request: POST http://localhost:11434/api/embed "HTTP/1.1 200 OK"
+2026-11-14 17:51:16,696-INFO-Use pytorch device: cpu

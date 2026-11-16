@@ -1,0 +1,101 @@
+2026-11-14 16:38:58,563-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-11-14 16:38:58,563-INFO-[33mPress CTRL+C to quit[0m
+2026-11-14 16:39:47,522-INFO-127.0.0.1 - - [14/Nov/2026 16:39:47] "GET / HTTP/1.1" 200 -
+2026-11-14 16:39:47,609-INFO-127.0.0.1 - - [14/Nov/2026 16:39:47] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2026-11-14 16:40:05,396-INFO-Loading vector store for context
+2026-11-14 16:40:05,396-INFO-Initializing hugging face embedding model
+2026-11-14 16:40:05,400-INFO-No device provided, using cpu
+2026-11-14 16:40:05,728-INFO-HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 16:40:05,742-INFO-Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-11-14 16:40:06,660-INFO-HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 16:40:06,974-INFO-HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 16:40:07,308-INFO-HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-11-14 16:40:07,311-INFO-Hugging face model loaded
+2026-11-14 16:40:07,311-INFO-Loading existing vectorstore
+2026-11-14 16:40:07,316-INFO-Loading faiss with AVX512 support.
+2026-11-14 16:40:07,317-INFO-Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-11-14 16:40:07,317-INFO-Loading faiss with AVX2 support.
+2026-11-14 16:40:07,317-INFO-Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-11-14 16:40:07,317-INFO-Loading faiss.
+2026-11-14 16:40:07,347-INFO-Successfully loaded faiss.
+2026-11-14 16:40:07,445-INFO-Loading LLM from Hugging Face
+2026-11-14 16:40:07,587-INFO-LLM loaded successfully
+2026-11-14 16:40:07,590-INFO-No device provided, using cpu
+2026-11-14 16:40:07,857-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2 "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:40:08,205-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 16:40:08,442-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:40:08,669-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 404 Not Found"
+2026-11-14 16:40:08,671-INFO-No modules.json found for cross-encoder/ms-marco-MiniLM-L-6-v2, initializing a new CrossEncoder model.
+2026-11-14 16:40:09,135-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:40:09,384-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 16:40:09,619-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:40:09,867-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 16:40:09,918-INFO-RAG chain created successfully
+2026-11-14 16:40:10,349-INFO-HTTP Request: GET https://huggingface.co/api/models/Qwen/Qwen2.5-7B-Instruct?expand=inferenceProviderMapping "HTTP/1.1 200 OK"
+2026-11-14 16:40:10,749-INFO-HTTP Request: POST https://router.huggingface.co/featherless-ai/v1/chat/completions "HTTP/1.1 402 Payment Required"
+2026-11-14 16:40:10,750-ERROR-Failed to process a chat question
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\huggingface_hub\utils\_http.py", line 836, in hf_raise_for_status
+    response.raise_for_status()
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\httpx\_models.py", line 829, in raise_for_status
+    raise HTTPStatusError(message, request=request, response=self)
+httpx.HTTPStatusError: Client error '402 Payment Required' for url 'https://router.huggingface.co/featherless-ai/v1/chat/completions'
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\application.py", line 76, in index
+    response = get_qa_chain().invoke({"input": user_input})
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 511, in invoke
+    return self._call_with_config(self._invoke, input, config, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 2356, in _call_with_config
+    context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\config.py", line 526, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 497, in _invoke
+    **self.mapper.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4205, in invoke
+    output = {
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4206, in <dictcomp>
+    key: future.result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 458, in result
+    return self.__get_result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4189, in _invoke_step
+    return context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 529, in invoke
+    self.generate_prompt(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1920, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1727, in generate
+    self._generate_with_cache(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 2065, in _generate_with_cache
+    result = self._generate(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_huggingface\chat_models\huggingface.py", line 755, in _generate
+    answer = self.llm.client.chat_completion(messages=message_dicts, **params)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\huggingface_hub\inference\_client.py", line 938, in chat_completion
+    data = self._inner_post(request_parameters, stream=stream)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\huggingface_hub\inference\_client.py", line 283, in _inner_post
+    hf_raise_for_status(response)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\huggingface_hub\utils\_http.py", line 966, in hf_raise_for_status
+    raise _format(HfHubHTTPError, str(e), response) from e
+huggingface_hub.errors.HfHubHTTPError: Client error '402 Payment Required' for url 'https://router.huggingface.co/featherless-ai/v1/chat/completions' (Request ID: Root=1-6af84193-51ab91371b70c027252d481e;91f7f7b3-856d-47e9-b246-74d6cf527b55)
+For more information check: https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/402
+
+Purchase pre-paid credits to continue using Inference Providers. Alternatively, subscribe to PRO to get monthly included credits.
+2026-11-14 16:40:10,755-INFO-127.0.0.1 - - [14/Nov/2026 16:40:10] "POST / HTTP/1.1" 200 -

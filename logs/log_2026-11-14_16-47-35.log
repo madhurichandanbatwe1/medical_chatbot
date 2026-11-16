@@ -1,0 +1,249 @@
+2026-11-14 16:47:35,518-INFO-[31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on http://127.0.0.1:5000
+2026-11-14 16:47:35,518-INFO-[33mPress CTRL+C to quit[0m
+2026-11-14 16:47:46,729-INFO-Loading vector store for context
+2026-11-14 16:47:46,730-INFO-Initializing hugging face embedding model
+2026-11-14 16:47:46,734-INFO-No device provided, using cpu
+2026-11-14 16:47:47,098-INFO-HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 16:47:47,106-INFO-Loading SentenceTransformer model from sentence-transformers/all-MiniLM-L6-v2.
+2026-11-14 16:47:47,992-INFO-HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 16:47:48,228-INFO-HTTP Request: GET https://huggingface.co/api/models/sentence-transformers/all-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 16:47:48,529-INFO-HTTP Request: HEAD https://huggingface.co/sentence-transformers/all-MiniLM-L6-v2/resolve/1110a243fdf4706b3f48f1d95db1a4f5529b4d41/2_Normalize/config.json "HTTP/1.1 404 Not Found"
+2026-11-14 16:47:48,534-INFO-Hugging face model loaded
+2026-11-14 16:47:48,534-INFO-Loading existing vectorstore
+2026-11-14 16:47:48,538-INFO-Loading faiss with AVX512 support.
+2026-11-14 16:47:48,539-INFO-Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-11-14 16:47:48,539-INFO-Loading faiss with AVX2 support.
+2026-11-14 16:47:48,539-INFO-Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-11-14 16:47:48,539-INFO-Loading faiss.
+2026-11-14 16:47:48,569-INFO-Successfully loaded faiss.
+2026-11-14 16:47:48,634-INFO-Loading LLM from Groq
+2026-11-14 16:47:48,774-INFO-Groq LLM configured successfully
+2026-11-14 16:47:48,778-INFO-No device provided, using cpu
+2026-11-14 16:47:49,029-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2 "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:47:49,281-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2 "HTTP/1.1 200 OK"
+2026-11-14 16:47:49,533-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L-6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:47:49,773-INFO-HTTP Request: HEAD https://huggingface.co/cross-encoder/ms-marco-MiniLM-L6-v2/resolve/233902d25c440f23af6f7d6e94d2946bac0bee0a/modules.json "HTTP/1.1 404 Not Found"
+2026-11-14 16:47:49,774-INFO-No modules.json found for cross-encoder/ms-marco-MiniLM-L-6-v2, initializing a new CrossEncoder model.
+2026-11-14 16:47:50,192-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:47:50,461-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main/additional_chat_templates?recursive=false&expand=false "HTTP/1.1 404 Not Found"
+2026-11-14 16:47:50,728-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L-6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 307 Temporary Redirect"
+2026-11-14 16:47:51,052-INFO-HTTP Request: GET https://huggingface.co/api/models/cross-encoder/ms-marco-MiniLM-L6-v2/tree/main?recursive=true&expand=false "HTTP/1.1 200 OK"
+2026-11-14 16:47:51,091-INFO-RAG chain created successfully
+2026-11-14 16:47:51,501-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-11-14 16:47:51,502-ERROR-Failed to process a chat question
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\application.py", line 76, in index
+    response = get_qa_chain().invoke({"input": user_input})
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 511, in invoke
+    return self._call_with_config(self._invoke, input, config, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 2356, in _call_with_config
+    context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\config.py", line 526, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 497, in _invoke
+    **self.mapper.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4205, in invoke
+    output = {
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4206, in <dictcomp>
+    key: future.result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 458, in result
+    return self.__get_result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4189, in _invoke_step
+    return context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 529, in invoke
+    self.generate_prompt(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1920, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1727, in generate
+    self._generate_with_cache(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 2065, in _generate_with_cache
+    result = self._generate(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_groq\chat_models.py", line 627, in _generate
+    response = self.client.create(messages=message_dicts, **params)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\resources\chat\completions.py", line 461, in create
+    return self._post(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-11-14 16:47:51,514-INFO-127.0.0.1 - - [14/Nov/2026 16:47:51] "POST / HTTP/1.1" 200 -
+2026-11-14 16:48:02,020-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-11-14 16:48:02,021-ERROR-Failed to process a chat question
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\application.py", line 76, in index
+    response = get_qa_chain().invoke({"input": user_input})
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 511, in invoke
+    return self._call_with_config(self._invoke, input, config, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 2356, in _call_with_config
+    context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\config.py", line 526, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 497, in _invoke
+    **self.mapper.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4205, in invoke
+    output = {
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4206, in <dictcomp>
+    key: future.result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 458, in result
+    return self.__get_result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4189, in _invoke_step
+    return context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 529, in invoke
+    self.generate_prompt(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1920, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1727, in generate
+    self._generate_with_cache(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 2065, in _generate_with_cache
+    result = self._generate(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_groq\chat_models.py", line 627, in _generate
+    response = self.client.create(messages=message_dicts, **params)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\resources\chat\completions.py", line 461, in create
+    return self._post(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-11-14 16:48:02,024-INFO-127.0.0.1 - - [14/Nov/2026 16:48:02] "POST / HTTP/1.1" 200 -
+2026-11-14 16:48:24,888-ERROR-127.0.0.1 - - [14/Nov/2026 16:48:24] code 400, message Bad request version ("\x82\x12\x92¨±e®I¯/l@â5N'\x94mî×Ëß|\x99èQ°ÏêÃ\x99Á,IÊL\x02y\x0e")
+2026-11-14 16:48:24,889-INFO-127.0.0.1 - - [14/Nov/2026 16:48:24] "[35m[1m\x16\x03\x01\x07Æ\x01\x00\x07Â\x03\x03\x97\x90\x12\x0d\x04ã^¡ë2NFMMlÞ)WÞZÙß\x988N¶mÝ©(Å\x93 |¬éQEãTZHÞ\x9eJ\x020-\x92ÞáÇiµ^=Ùjôëùliq\x81\x00 ZZ\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x07YÊÊ\x00\x00\x00#\x00\x00\x00\x12\x00\x00\x00-\x00\x02\x01\x01ÿ\x01\x00\x01\x00\x003\x04ï\x04í::\x00\x01\x00\x11ì\x04À(Ìt0H\x0flûÆüt\x0c©«)í\x96\x7f&V6{\x87¡`k+ëg¡DØS\x8b§[îlfCÜf1k¬þ\x95\x04äPÈ\x0d·#pàs­ÊÍöèE\x18ªLÍ\x13HRÈ'W\x93_i2¶!r\x93;\x088Æ4¤{lc¼õ'm7q\x13d\x80J«·k\x08vXò\x86w¨\x17c\x856£´\x81%\x89Y\x8f5½ý<g\x8fÐ\x12Ò\x84\x9cõpUç\x13³¼*Y\x9cx\x96ñ\x16Nn\x99\x1fÄÕ-á\x13\x888\x12\x9eÆBÄc\x1bµ\x87\x16\x92x&lÀr:\x8dÀo«YH\x04\x19¿0\x909vÕ\x10Ø\x9cl©Ñ\x8fý\x82\x01ÈÜaúÖ¯\x0b |.£]ÃÄZçé\x10d&*ÁªWt¨Æ`\x04¿´¼\x8d­¬½æùbFzwÌ¥\x13Bk6\x0b\x97\x90®s54K\x10^Ä+ûÛ.è)2Z0\x8d-æ¢Èv«Kñw=\x0c\x97¨4Ë<ì¥ºò\x065ñ-y\x80\x9aÃ5Lô\x11\x12zX\x16\x80S\x89Êk\x1e\x82\x12\x92¨±e®I¯/l@â5N'\x94mî×Ëß|\x99èQ°ÏêÃ\x99Á,IÊL\x02y\x0e[0m" HTTPStatus.BAD_REQUEST -
+2026-11-14 16:48:24,890-ERROR-127.0.0.1 - - [14/Nov/2026 16:48:24] code 400, message Bad request version ('¶')
+2026-11-14 16:48:24,890-INFO-127.0.0.1 - - [14/Nov/2026 16:48:24] "[35m[1m\x16\x03\x01\x07f\x01\x00\x07b\x03\x03ò\x95¨ô\x0db\x8f\x0f\x1f:Éf\x9d36¡A\x1c±ÛÙÅÐ\x8c¯\x10\x19"\x07^Å\x9c ¶[0m" HTTPStatus.BAD_REQUEST -
+2026-11-14 16:48:24,890-ERROR-127.0.0.1 - - [14/Nov/2026 16:48:24] code 400, message Bad request version ('¸\x0fhØ\x87\x8a×')
+2026-11-14 16:48:24,890-INFO-127.0.0.1 - - [14/Nov/2026 16:48:24] "[35m[1m\x16\x03\x01\x07¦\x01\x00\x07¢\x03\x03\x96\x18°ÍÒ]Û¶ê\x9d\x14a^\x05\x14égV't\x8b\x04$·Ð\x94}S~ø\x9f$ =¯Å.Ñ\x01ñÅ\x82Qw{2\x8dH\x0d0«Ò\x11~\x8ejÙæ{h8\x88cd|\x00 úú\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x079\x1a\x1a\x00\x00DÍ\x00\x05\x00\x03\x02h2\x00\x12\x00\x00\x00\x0b\x00\x02\x01\x00\x00\x0d\x00\x1a\x00\x18êê\x09\x04\x09\x05\x09\x06\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01\x00+\x00\x07\x06ÊÊ\x03\x04\x03\x03þ\x0d\x00ú\x00\x00\x01\x00\x01\x8c\x00 j\x86AÛ\x9b¹^\x1d3\x17~ú\x8d\x08^f/eBO&\x04ÿ`eêajsÅ4f\x00Ð\x95\x8c\x9c \x09±\x84\x8f\x08DÐ\x1c¸\x0fhØ\x87\x8a×[0m" HTTPStatus.BAD_REQUEST -
+2026-11-14 16:48:24,893-ERROR-127.0.0.1 - - [14/Nov/2026 16:48:24] code 400, message Bad request version ('Þ¼Éô\x9db÷\x8c\x9fBG\x918\x16\x9bq\x02Ò\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00')
+2026-11-14 16:48:24,893-INFO-127.0.0.1 - - [14/Nov/2026 16:48:24] "[35m[1m\x16\x03\x01\x07\x86\x01\x00\x07\x82\x03\x03P3ò\x85\x82íY\x96²?\x81\x87;"£A4H\x14Û\x82ú\x0b\x9e\x165\x18`\x14{·ñ >ot-|q\x11\x83\x1eõÛÆ\x94z7ÙLéÚ\x06ø\x86\x8f«/ÿä\x16\x19MÝÌ\x00 ::\x13\x01\x13\x02\x13\x03À+À/À,À0Ì©Ì¨À\x13À\x14\x00\x9c\x00\x9d\x00/\x005\x01\x00\x07\x19ÊÊ\x00\x00\x00+\x00\x07\x06\x9a\x9a\x03\x04\x03\x03\x00\x0b\x00\x02\x01\x00\x00\x0d\x00\x1a\x00\x18::\x09\x04\x09\x05\x09\x06\x04\x03\x08\x04\x04\x01\x05\x03\x08\x05\x05\x01\x08\x06\x06\x01DÍ\x00\x05\x00\x03\x02h2\x00\x10\x00\x0e\x00\x0c\x02h2\x08http/1.1þ\x0d\x00Ú\x00\x00\x01\x00\x017\x00 ÔÃV\x97.v9\x1dü\x8cÈ5\x9dHb\x86Ò\x8f;âÛ\x14¤ÄÔ\x18Ìí\x0d\x92ó\x0c\x00°Þ¯\x09Ò\x1ey¿V{\x09Ñ\x02­9\x05\x9e©"©\x1bëÛºVO%\x88\x17"¿N\x96ÌL\x945à\x9bÚ\x06sÂá@ÌÓw"\x0b\x022î9Ä+h8\x7f4Ô©©CÙaÖä+#\x12k*\x15øxuí)Î\x07\x8f§\x9f^\x87=B®ñê\x0fÂéRB, \x98\x00g\x1cµß\x19á³ez\x01\x81¿?}@çÔ\x97R\x0cßKX\x97Âèxuû`.\x1fI¡÷íß²°0\x0d>p\x15û´º\x89â\x93¸¥¼)\x15¸x»\x1eÞ¼Éô\x9db÷\x8c\x9fBG\x918\x16\x9bq\x02Ò\x00\x05\x00\x05\x01\x00\x00\x00\x00\x00[0m" HTTPStatus.BAD_REQUEST -
+2026-11-14 16:49:25,844-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-11-14 16:49:25,845-ERROR-Failed to process a chat question
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\application.py", line 76, in index
+    response = get_qa_chain().invoke({"input": user_input})
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 511, in invoke
+    return self._call_with_config(self._invoke, input, config, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 2356, in _call_with_config
+    context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\config.py", line 526, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 497, in _invoke
+    **self.mapper.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4205, in invoke
+    output = {
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4206, in <dictcomp>
+    key: future.result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 458, in result
+    return self.__get_result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4189, in _invoke_step
+    return context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 529, in invoke
+    self.generate_prompt(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1920, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1727, in generate
+    self._generate_with_cache(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 2065, in _generate_with_cache
+    result = self._generate(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_groq\chat_models.py", line 627, in _generate
+    response = self.client.create(messages=message_dicts, **params)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\resources\chat\completions.py", line 461, in create
+    return self._post(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-11-14 16:49:25,847-INFO-127.0.0.1 - - [14/Nov/2026 16:49:25] "POST / HTTP/1.1" 200 -
+2026-11-14 16:49:25,934-INFO-127.0.0.1 - - [14/Nov/2026 16:49:25] "[32mPOST /clear HTTP/1.1[0m" 302 -
+2026-11-14 16:49:25,974-INFO-127.0.0.1 - - [14/Nov/2026 16:49:25] "GET / HTTP/1.1" 200 -
+2026-11-14 16:50:09,438-INFO-127.0.0.1 - - [14/Nov/2026 16:50:09] "GET / HTTP/1.1" 200 -
+2026-11-14 16:50:21,884-INFO-HTTP Request: POST https://api.groq.com/openai/v1/chat/completions "HTTP/1.1 401 Unauthorized"
+2026-11-14 16:50:21,885-ERROR-Failed to process a chat question
+Traceback (most recent call last):
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\app\application.py", line 76, in index
+    response = get_qa_chain().invoke({"input": user_input})
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 511, in invoke
+    return self._call_with_config(self._invoke, input, config, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 2356, in _call_with_config
+    context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\config.py", line 526, in call_func_with_variable_args
+    return func(input, **kwargs)  # type: ignore[call-arg]
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\passthrough.py", line 497, in _invoke
+    **self.mapper.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4205, in invoke
+    output = {
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4206, in <dictcomp>
+    key: future.result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 458, in result
+    return self.__get_result()
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\_base.py", line 403, in __get_result
+    raise self._exception
+  File "C:\Users\madhu\AppData\Local\Programs\Python\Python310\lib\concurrent\futures\thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 4189, in _invoke_step
+    return context.run(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 6001, in invoke
+    return self.bound.invoke(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\runnables\base.py", line 3475, in invoke
+    input_ = context.run(step.invoke, input_, config)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 529, in invoke
+    self.generate_prompt(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1920, in generate_prompt
+    return self.generate(prompt_messages, stop=stop, callbacks=callbacks, **kwargs)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 1727, in generate
+    self._generate_with_cache(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_core\language_models\chat_models.py", line 2065, in _generate_with_cache
+    result = self._generate(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\langchain_groq\chat_models.py", line 627, in _generate
+    response = self.client.create(messages=message_dicts, **params)
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\resources\chat\completions.py", line 461, in create
+    return self._post(
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\_base_client.py", line 1242, in post
+    return cast(ResponseT, self.request(cast_to, opts, stream=stream, stream_cls=stream_cls))
+  File "C:\Users\madhu\madhuri_chandanbatwe\llmopsandaiops\medical_chatbot\chatbot-medical\lib\site-packages\groq\_base_client.py", line 1044, in request
+    raise self._make_status_error_from_response(err.response) from None
+groq.AuthenticationError: Error code: 401 - {'error': {'message': 'Invalid API Key', 'type': 'invalid_request_error', 'code': 'invalid_api_key'}}
+2026-11-14 16:50:21,886-INFO-127.0.0.1 - - [14/Nov/2026 16:50:21] "POST / HTTP/1.1" 200 -

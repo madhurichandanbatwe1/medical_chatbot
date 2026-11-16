@@ -1,0 +1,12 @@
+langchain
+faiss-cpu
+pypdf
+langchain-community
+huggingface-hub
+python-dotenv
+flask
+sentence-transformers
+psycopg[binary]>=3.2,<4
+langchain-groq
+langchain-ollama
+langchain-experimental>=0.4,<0.5

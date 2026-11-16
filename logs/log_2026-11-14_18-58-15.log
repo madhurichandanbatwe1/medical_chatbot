@@ -1,0 +1,11 @@
+2026-11-14 18:58:15,713-INFO-Initializing Ollama embedding model nomic-embed-text
+2026-11-14 18:58:15,726-INFO-Ollama embedding model configured
+2026-11-14 18:58:15,726-INFO-Loading vector store from vectorstore/db_faiss_nomic_semantic
+2026-11-14 18:58:15,729-INFO-Loading faiss with AVX512 support.
+2026-11-14 18:58:15,729-INFO-Could not load library with AVX512 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx512'")
+2026-11-14 18:58:15,729-INFO-Loading faiss with AVX2 support.
+2026-11-14 18:58:15,729-INFO-Could not load library with AVX2 support due to:
+ModuleNotFoundError("No module named 'faiss.swigfaiss_avx2'")
+2026-11-14 18:58:15,739-INFO-Loading faiss.
+2026-11-14 18:58:15,766-INFO-Successfully loaded faiss.
